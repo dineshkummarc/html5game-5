@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Getting Familiar with CSS3 Transition</title>
+    <link rel="stylesheet" href="css/css3transition.css" />
+</head>
+<body>
+    <header>
+        <h1>Getting Familiar with CSS3 Transition</h1>
+    </header>
+
+    <section id="game">
+    	<div id="cards">
+    		<div id="card1" class="card cardAK"></div>
+    		<div id="card2" class="card cardAQ"></div>
+    	</div>
+    </section>
+    <footer>
+        <p>This is an example of tansitioning cards.</p>
+    </footer>
+    <script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#card1").addClass("moveAndScale");
+            $("#card2").addClass("rotateRight");
+        });
+    </script>
+</body>
+</html>
