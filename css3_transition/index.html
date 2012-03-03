@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Getting Familiar with CSS3 Transition</title>
     <link rel="stylesheet" href="css/css3transition.css" />
+    <link rel="stylesheet" href="css/css3flip.css" />
 </head>
 <body>
     <header>
@@ -11,9 +12,15 @@
     </header>
 
     <section id="game">
-    	<div id="cards">
-    		<div id="card1" class="card cardAK"></div>
-    		<div id="card2" class="card cardAQ"></div>
+    	<div id="cards" class="clear">
+    		<div class="card">
+                <div class="face front"></div>
+                <div class="face back cardAK"></div>
+    		</div>
+    		<div class="card">
+                <div class="face front"></div>
+                <div class="face back cardAQ"></div>
+    		</div>
     	</div>
     </section>
     <footer>
@@ -22,8 +29,11 @@
     <script type="text/javascript" src="js/jquery-1.7.1.js"></script>
     <script type="text/javascript">
         $(function(){
-            $("#card1").addClass("moveAndScale");
-            $("#card2").addClass("rotateRight");
+            $("#cards").children().each(function(index){
+                $(this).click(function(){
+                    $(this).toggleClass("card-flipped");
+                });
+            });
         });
     </script>
 </body>
